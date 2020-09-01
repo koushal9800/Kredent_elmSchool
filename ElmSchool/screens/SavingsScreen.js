@@ -7,6 +7,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Container, Header, Content, Picker, Form } from "native-base";
 import Swiper from "react-native-web-swiper";
 
+import ScrollContent from './ScrollContent';
+
 function SavingsScreen({ navigation }) {
   const { width } = Dimensions.get("window");
 
@@ -30,66 +32,21 @@ function SavingsScreen({ navigation }) {
 
 
 
+              <ScrollView style={{flex:1,   
+            }}
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+                pagingEnabled={true}
+                >
+                <ScrollContent style={{width:Dimensions.get('window').width,
+            height:Dimensions.get('window').height,  }} />
+                <ScrollContent  style={{width:Dimensions.get('window').width,
+            height:Dimensions.get('window').height,  }}/>
+                <ScrollContent  style={{width:Dimensions.get('window').width,
+            height:Dimensions.get('window').height,  }}/>
+                </ScrollView>
 
-
-                  <ScrollView
-                  horizontal={true}
-                  pagingEnabled={true}
-                  showsHorizontalScrollIndicator={false}
-                  >
-              
-                    <ScrollView 
-                    
-                    style={[styles.slideContainer,styles.slide]}>
-                    <Image source={require('../assests/1.png')} style={styles.image}></Image>
-                        <Text style={styles.TextOne}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                        </Text>
-                    </ScrollView>
-
-                    <ScrollView style={[styles.slideContainer,styles.slide]}>
-
-                    <Image source={require('../assests/2.png')} style={styles.image}></Image>
-                        <Text style={styles.TextOne}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                        </Text>
-                    
-                  </ScrollView>
-
-                    <ScrollView style={[styles.slideContainer,styles.slide]}>
-
-                    <Image source={require('../assests/3.png')} style={styles.image}></Image>
-                        <Text style={styles.TextOne}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                        </Text>
-                    
-                    </ScrollView>
-
-                    <ScrollView style={[styles.slideContainer,styles.slide]}>
-
-                    <Image source={require('../assests/Fin.jpg')} style={styles.image}></Image>
-                        <Text style={styles.TextOne}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                        </Text>
-                    
-                    </ScrollView>
-
-                    <ScrollView style={[styles.slideContainer,styles.slide]}>
-
-                    <Image source={require('../assests/w1.jpg')} style={styles.image}></Image>
-                        <Text style={styles.TextOne}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                        </Text>
-                    
-                    </ScrollView>
-                    </ScrollView>
-                
-  
+                 
 
               </View>
 
